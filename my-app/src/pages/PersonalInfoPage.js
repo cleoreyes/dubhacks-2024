@@ -29,7 +29,7 @@ const PersonalInfoForm = ({ fields, onAdd }) => {
     acc[field] = "";
     return acc;
   }, {});
-  
+
   const [input, setInput] = useState(initialState);
 
   const handleSubmit = (e) => {
@@ -62,7 +62,10 @@ const InteractiveList = ({ items, onDelete }) => {
   return (
     <ul className="list-group">
       {items.map((item, index) => (
-        <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
+        <li
+          key={index}
+          className="list-group-item d-flex justify-content-between align-items-center"
+        >
           {Object.entries(item).map(([key, value]) => (
             <div key={key}>
               <strong>{key}:</strong> {value}
@@ -104,38 +107,70 @@ export default function PersonalInfoPage() {
           <div className="row">
             <div className="col-12">
               <Dropdown title="Basic Information">
-                <PersonalInfoForm 
-                  fields={["Full Name", "Date of Birth", "Place of Birth", "Current Address"]} 
-                  onAdd={addItem(setBasicInfo)} 
+                <PersonalInfoForm
+                  fields={[
+                    "Full Name",
+                    "Date of Birth",
+                    "Place of Birth",
+                    "Current Address",
+                  ]}
+                  onAdd={addItem(setBasicInfo)}
                 />
-                <InteractiveList items={basicInfo} onDelete={deleteItem(setBasicInfo)} />
+                <InteractiveList
+                  items={basicInfo}
+                  onDelete={deleteItem(setBasicInfo)}
+                />
               </Dropdown>
             </div>
             <div className="col-12">
               <Dropdown title="Educational Background">
-                <PersonalInfoForm 
-                  fields={["Schools Attended", "Degrees and Certifications", "Notable Achievements", "Extracurricular Activities"]} 
-                  onAdd={addItem(setEducation)} 
+                <PersonalInfoForm
+                  fields={[
+                    "Schools Attended",
+                    "Degrees and Certifications",
+                    "Notable Achievements",
+                    "Extracurricular Activities",
+                  ]}
+                  onAdd={addItem(setEducation)}
                 />
-                <InteractiveList items={education} onDelete={deleteItem(setEducation)} />
+                <InteractiveList
+                  items={education}
+                  onDelete={deleteItem(setEducation)}
+                />
               </Dropdown>
             </div>
             <div className="col-12">
               <Dropdown title="Career Information">
-                <PersonalInfoForm 
-                  fields={["Job History", "Current Employment", "Professional Achievements", "Skills and Expertise"]} 
-                  onAdd={addItem(setCareerInfo)} 
+                <PersonalInfoForm
+                  fields={[
+                    "Job History",
+                    "Current Employment",
+                    "Professional Achievements",
+                    "Skills and Expertise",
+                  ]}
+                  onAdd={addItem(setCareerInfo)}
                 />
-                <InteractiveList items={careerInfo} onDelete={deleteItem(setCareerInfo)} />
+                <InteractiveList
+                  items={careerInfo}
+                  onDelete={deleteItem(setCareerInfo)}
+                />
               </Dropdown>
             </div>
             <div className="col-12">
               <Dropdown title="Family Introduction">
-                <PersonalInfoForm 
-                  fields={["Immediate Family Members", "Extended Family", "Pet Information", "Family Traditions"]} 
-                  onAdd={addItem(setFamilyInfo)} 
+                <PersonalInfoForm
+                  fields={[
+                    "Immediate Family Members",
+                    "Extended Family",
+                    "Pet Information",
+                    "Family Traditions",
+                  ]}
+                  onAdd={addItem(setFamilyInfo)}
                 />
-                <InteractiveList items={familyInfo} onDelete={deleteItem(setFamilyInfo)} />
+                <InteractiveList
+                  items={familyInfo}
+                  onDelete={deleteItem(setFamilyInfo)}
+                />
               </Dropdown>
             </div>
           </div>

@@ -8,7 +8,7 @@ import {
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./index.css"; 
+import "./index.css";
 import Landing from "./pages/Landing";
 import Homepage from "./pages/Homepage";
 import PersonalInfoPage from "./pages/PersonalInfoPage";
