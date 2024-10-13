@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <nav style={navbarStyle}>
-      <a href="#" style={brandStyle}>Eterna</a>
+      <a href="/" style={brandStyle}>Eterna</a>
       <ul style={navListStyle}>
         {/* <li style={navItemStyle}><img src="img/circle.png"></img><a href="#profile" style={navLinkStyle}>Profile</a></li> */}
         <a href="#profile"><button className="circle-button" style={{ borderRadius: '100%' }}>O</button></a>
