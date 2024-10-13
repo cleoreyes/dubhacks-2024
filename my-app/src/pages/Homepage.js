@@ -22,33 +22,43 @@ const Homepage = () => {
               </Link>
             </div>
             <div className="col-6 p-3">
-              <div className="category-box  w-100 d-flex justify-content-center align-items-center">
-                <p className="m-0 h4">Messages and Advice</p>
-              </div>
+            <Link to="/messages" style={{ textDecoration: "none" }}>
+                <div className="category-box w-100 d-flex justify-content-center align-items-center text-black">
+                  <p className="m-0 h4">Messages and Advice</p>
+                </div>
+              </Link>
             </div>
           </div>
           <div className="row w-100">
             <div className="col-6 p-3">
-              <div className="category-box  w-100 d-flex justify-content-center align-items-center">
-                <p className="m-0 h4">Reflections and Stories</p>
-              </div>
+            <Link to="/reflections" style={{ textDecoration: "none" }}>
+                <div className="category-box w-100 d-flex justify-content-center align-items-center text-black">
+                  <p className="m-0 h4">Reflections and Stories</p>
+                </div>
+              </Link>
             </div>
             <div className="col-6 p-3">
-              <div className="category-box  w-100 d-flex justify-content-center align-items-center">
-                <p className="m-0 h4">Life Documents</p>
-              </div>
+            <Link to="/lifedocuments" style={{ textDecoration: "none" }}>
+                <div className="category-box w-100 d-flex justify-content-center align-items-center text-black">
+                  <p className="m-0 h4">Life Documents</p>
+                </div>
+              </Link>
             </div>
           </div>
           <div className="row w-100">
             <div className="col-6 p-3">
-              <div className="category-box  w-100 d-flex justify-content-center align-items-center">
-                <p className="m-0 h4">Media</p>
-              </div>
+            <Link to="/media" style={{ textDecoration: "none" }}>
+                <div className="category-box w-100 d-flex justify-content-center align-items-center text-black">
+                  <p className="m-0 h4">Media and Memories</p>
+                </div>
+              </Link>
             </div>
             <div className="col-6 p-3">
-              <div className="category-box  w-100 d-flex justify-content-center align-items-center">
-                <p className="m-0 h4">Recipes and Traditions</p>
-              </div>
+            <Link to="/recipesandtraditions" style={{ textDecoration: "none" }}>
+                <div className="category-box w-100 d-flex justify-content-center align-items-center text-black">
+                  <p className="m-0 h4">Recipes and Traditions</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
