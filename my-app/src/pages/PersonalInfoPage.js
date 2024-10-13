@@ -19,9 +19,7 @@ const Dropdown = ({ title, children }) => {
         <span>{title}</span>
         <span className="text-xl">{isOpen ? "▲" : "▼"}</span>
       </button>
-      {isOpen && (
-        <div className="p-3 border border-top-0 bg-light">{children}</div>
-      )}
+      {isOpen && <div className="p-3 border border-top-0">{children}</div>}
     </div>
   );
 };
@@ -30,10 +28,7 @@ export default function PersonalInfoPage() {
   return (
     <>
       <Navbar />
-      <div
-        className="p-4"
-        style={{ backgroundColor: "#f8f9fa", minHeight: "100vh" }}
-      >
+      <div className="p-4 margins" style={{ minHeight: "100vh" }}>
         <h1 className="text-center mb-4">Personal Information</h1>
 
         <div className="container">

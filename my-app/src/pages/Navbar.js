@@ -39,12 +39,7 @@ const Navbar = () => {
         Eterna
       </a>
       <ul style={navListStyle}>
-        <li style={navItemStyle}>
-          <img src="./../circle.png"></img>
-          <a href="#profile" style={navLinkStyle}>
-            Profile
-          </a>
-        </li>
+        <li style={navItemStyle}></li>
         <a href="#profile">
           <button className="circle-button" style={{ borderRadius: "100%" }}>
             O
