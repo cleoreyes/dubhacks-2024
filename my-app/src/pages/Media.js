@@ -24,6 +24,23 @@ const Dropdown = ({ title, children }) => {
   );
 };
 
+const ImageUpload = () => {
+  const [file, setFile] = useState();
+
+  function handleChange(e) {
+    console.log(e.target.files);
+    setFile(URL.createObjectURL(e.target.files[0]));
+  }
+
+  return (
+    <div className="mt-3">
+      <h5>Upload a Photo:</h5>
+      <input type="file" onChange={handleChange} className="form-control mb-2" />
+      {file && <img src={file} alt="Uploaded" className="img-fluid mt-2" style={{maxHeight: "200px"}} />}
+    </div>
+  );
+};
+
 export default function MediaMemoriesPage() {
   return (
     <>
@@ -50,6 +67,7 @@ export default function MediaMemoriesPage() {
                   <strong>Friends and Social Life:</strong> Include pictures
                   with friends that capture fun moments and social experiences.
                 </p>
+                <ImageUpload />
               </Dropdown>
             </div>
             <div className="col-12">
