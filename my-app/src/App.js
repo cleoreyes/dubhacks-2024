@@ -8,11 +8,12 @@ import {
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./index.css"; // Your own custom styles
+import "./index.css";
 import Landing from "./pages/Landing";
 import Homepage from "./pages/Homepage";
 import PersonalInfoPage from "./pages/PersonalInfoPage";
 import SecurityQuestPage from "./pages/SecurityQuestPage";
+import Media from "./pages/Media";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/homepage" element={<Homepage />} />
           <Route path="/personal-info" element={<PersonalInfoPage />} />
+          <Route path="/media" element={<Media />} />
         </Routes>
       </div>
     </Router>
