@@ -8,7 +8,7 @@ import {
 import "./App.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./index.css"; // Your own custom styles
+import "./index.css"; 
 import Landing from "./pages/Landing";
 import Homepage from "./pages/Homepage";
 import PersonalInfoPage from "./pages/PersonalInfoPage";
@@ -25,6 +25,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/security" element={<SecurityQuestPage />} />
           <Route path="/homepage" element={<Homepage />} />
           <Route path="/personal-info" element={<PersonalInfoPage />} />
           <Route path="/messages" element={<MessagesPage />} />

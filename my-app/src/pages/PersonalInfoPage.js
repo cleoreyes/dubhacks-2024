@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../App.css"; // Ensure your styles are imported
+import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./Navbar"; // Import your Navbar component
+import Navbar from "./Navbar"; 
 
 const Dropdown = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);

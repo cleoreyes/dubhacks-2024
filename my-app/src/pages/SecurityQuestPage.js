@@ -6,7 +6,7 @@ export const SecurityQuestPage = () => {
   return (
     <div className="center">
       <h1 className="fw-bold">Security Question:</h1>
-      <p>What is Kuromi's maiden mother's name?</p>
+      <p>What is Karen's maiden mother's name?</p>
 
       <div>
         <textarea style={{ width: "300px", height: "100px" }}> </textarea>
