@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'; // Your own custom styles
 import Landing from './pages/Landing';
