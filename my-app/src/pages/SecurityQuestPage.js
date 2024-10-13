@@ -14,11 +14,11 @@ export const SecurityQuestPage = () => {
       </div>
 
       <Link to="/homepage">
-      <div>
-        <button type="button" class="btn btn-secondary mt-2">
-          Submit
-        </button>
-      </div> 
+        <div>
+          <button type="button" class="btn btn-secondary mt-2">
+            Submit
+          </button>
+        </div>
       </Link>
     </div>
   );
