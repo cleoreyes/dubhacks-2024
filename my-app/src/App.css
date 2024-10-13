@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: "Inter";
+  background-color: #d7dae5;
 }
 
 .App-logo {
@@ -46,16 +47,17 @@
 .category-box {
   min-height: 200px;
   border-radius: 25px;
-  background-color: #d9d9d9;
+  background-color: #6b7d7d;
   transition:
     background-color 0.5s,
     transform 0.5s,
     box-shadow 0.5s;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
 .category-box:hover {
-  background-color: #8c97a0;
+  background-color: #a6d8d4;
   transform: scale(1.1);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
@@ -71,4 +73,8 @@
 .profile {
   width: 20px;
   height: 20px;
+}
+
+.login {
+  background-color: #6b7d7d;
 }
