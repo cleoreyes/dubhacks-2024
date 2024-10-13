@@ -41,8 +41,8 @@ const Navbar = () => {
       </a>
       <ul style={navListStyle}>
         <li style={navItemStyle}></li>
-        <Link to="/" >
-          <img className="profile" src={profile}/>
+        <Link to="/">
+          <img className="profile" src={profile} />
         </Link>
       </ul>
     </nav>

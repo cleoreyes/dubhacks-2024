@@ -31,7 +31,10 @@ function App() {
           <Route path="/reflections" element={<Reflections />} />
           <Route path="/lifedocuments" element={<LifeDocumentsPage />} />
           <Route path="/media" element={<MediaMemoriesPage />} />
-          <Route path="/recipesandtraditions" element={<RecipesTraditionsPage />} />
+          <Route
+            path="/recipesandtraditions"
+            element={<RecipesTraditionsPage />}
+          />
         </Routes>
       </div>
     </Router>

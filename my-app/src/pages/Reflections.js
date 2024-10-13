@@ -49,13 +49,22 @@ export default function MessagesPage() {
             <div className="col-12">
               <Dropdown title="Reflections and Stories">
                 <p>
-                  <strong>Life Reflections:</strong> Share your thoughts on life, the things you've come to value most, and the moments that have shaped your character.
+                  <strong>Life Reflections:</strong> Share your thoughts on
+                  life, the things you've come to value most, and the moments
+                  that have shaped your character.
                   <br />
-                  <strong>Hardships and Growth:</strong> Reflect on the difficult moments you’ve faced and how you overcame them, so that your loved ones can draw strength from your resilience.
+                  <strong>Hardships and Growth:</strong> Reflect on the
+                  difficult moments you’ve faced and how you overcame them, so
+                  that your loved ones can draw strength from your resilience.
                   <br />
-                  <strong>Life Philosophy:</strong> Offer reflections on your personal beliefs, values, or a guiding philosophy that has influenced your decisions and actions.
+                  <strong>Life Philosophy:</strong> Offer reflections on your
+                  personal beliefs, values, or a guiding philosophy that has
+                  influenced your decisions and actions.
                   <br />
-                  <strong>Funny or Touching Stories:</strong> Share lighthearted or meaningful stories that capture who you were and how you viewed the world. These can help others smile and remember you fondly.
+                  <strong>Funny or Touching Stories:</strong> Share lighthearted
+                  or meaningful stories that capture who you were and how you
+                  viewed the world. These can help others smile and remember you
+                  fondly.
                 </p>
               </Dropdown>
             </div>
