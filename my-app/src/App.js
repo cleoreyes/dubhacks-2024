@@ -2,7 +2,6 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'; // Your own custom styles
-import Landing from './pages/Landing';
 import Homepage from './pages/Homepage';
 
 //import the function from the realtime database module
