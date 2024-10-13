@@ -3,7 +3,7 @@ import React from 'react';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export const HomePage = () => {
+const Landing = () => {
   return (
     <div className="d-flex flex-row vh-100">
         <div className="col-8 text-start d-flex flex-column justify-content-center ps-5">
@@ -18,4 +18,4 @@ export const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Landing;
