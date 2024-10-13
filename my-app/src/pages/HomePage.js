@@ -11,7 +11,6 @@ export const HomePage = () => {
           <h2 className="">Stay with your loved ones for eternity.</h2>
         </div>
 
-      
       <div className="col-4 bg-secondary p-3 text-light rounded-left rounded-top">
         <p>Login</p>
       </div>
