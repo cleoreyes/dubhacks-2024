@@ -1,5 +1,6 @@
 import React from "react";
-import profile from "../img/circle.png";
+import profile from "../img/user.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navbarStyle = {
@@ -40,11 +41,9 @@ const Navbar = () => {
       </a>
       <ul style={navListStyle}>
         <li style={navItemStyle}></li>
-        <a href="#profile">
-          <button className="circle-button" style={{ borderRadius: "100%" }}>
-            O
-          </button>
-        </a>
+        <Link to="/" >
+          <img className="profile" src={profile}/>
+        </Link>
       </ul>
     </nav>
   );

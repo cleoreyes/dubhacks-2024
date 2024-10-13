@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Inter';
 }
 
 .App-logo {
@@ -47,13 +48,16 @@
   border-radius: 25px;
   background-color: #d9d9d9;
   transition:
-    background-color 0.3s,
-    transform 0.3s;
+    background-color 0.5s,
+    transform 0.5s,
+    box-shadow 0.5s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .category-box:hover {
   background-color: #8c97a0;
   transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .center {
@@ -62,4 +66,9 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.profile {
+  width: 20px;
+  height: 20px;
 }
