@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import heartImage from "../img/heart.png";
 
 const Homepage = () => {
-  const [position, setPosition] = useState({ x: 20, y: 20 });
+  const [position, setPosition] = useState({ x: 110, y: 220 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const heartRef = useRef(null);
@@ -105,7 +105,7 @@ const Homepage = () => {
       <img
         ref={heartRef}
         src={heartImage}
-        alt="Draggable Heart"
+        alt="draggable heart"
         style={{
           position: 'absolute',
           left: `${position.x}px`,
@@ -114,8 +114,25 @@ const Homepage = () => {
           userSelect: 'none',
           width: '100px',
           height: 'auto',
+          zIndex: 1000,
         }}
       />
+      <div
+          style={{
+            position: 'absolute',
+            top: '23%',
+            left: '10%',
+            transform: 'translate(-50%, -50%)',
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            padding: '2px 5px',
+            borderRadius: '3px',
+            fontSize: '12px',
+            fontWeight: 'bold',
+            pointerEvents: 'none',
+          }}
+        >
+          a heart i drew for you, kuromi - 2/12/24
+        </div>
     </div>
   );
 };
