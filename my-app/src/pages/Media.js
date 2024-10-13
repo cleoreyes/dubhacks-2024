@@ -35,8 +35,19 @@ const ImageUpload = () => {
   return (
     <div className="mt-3">
       <h5>Upload a Photo:</h5>
-      <input type="file" onChange={handleChange} className="form-control mb-2" />
-      {file && <img src={file} alt="Uploaded" className="img-fluid mt-2" style={{maxHeight: "200px"}} />}
+      <input
+        type="file"
+        onChange={handleChange}
+        className="form-control mb-2"
+      />
+      {file && (
+        <img
+          src={file}
+          alt="Uploaded"
+          className="img-fluid mt-2"
+          style={{ maxHeight: "200px" }}
+        />
+      )}
     </div>
   );
 };
