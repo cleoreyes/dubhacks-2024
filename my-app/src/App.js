@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'; // Your own custom styles
 import Landing from './pages/Landing';
+import Homepage from './pages/Homepage';
 
 //import the function from the realtime database module
 // import { getDatabase, ref, set as firebaseSet } from 'firebase/database';
@@ -10,7 +11,7 @@ import Landing from './pages/Landing';
 function App() {
   return (
     <div className="App">
-      <Landing />
+      <Homepage />
       
     </div>
   );
