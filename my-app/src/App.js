@@ -5,6 +5,7 @@ import Navbar from './pages/Navbar';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'; // Your own custom styles
+import Homepage from './pages/Homepage';
 
 //import the function from the realtime database module
 // import { getDatabase, ref, set as firebaseSet } from 'firebase/database';
@@ -12,6 +13,9 @@ import './index.css'; // Your own custom styles
 function App() {
   return (
     <div className="App">
+      <Homepage />
+      
+
       <Navbar />
 
     </div>
