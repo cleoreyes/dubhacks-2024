@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 export const SecurityQuestPage = () => {
   return (
@@ -12,11 +13,13 @@ export const SecurityQuestPage = () => {
         <textarea style={{ width: "300px", height: "100px" }}> </textarea>
       </div>
 
+      <Link to="/homepage">
       <div>
         <button type="button" class="btn btn-outline-primary mt-2">
           Submit
         </button>
-      </div>
+      </div> 
+      </Link>
     </div>
   );
 };

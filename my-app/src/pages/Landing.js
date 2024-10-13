@@ -43,7 +43,7 @@ const Landing = () => {
             </label>
             <input type="password" id="password" className="form-control" />
           </div>
-          <Link to="/homepage">
+          <Link to="/security">
             <h3 className="text-center">
               <button type="submit" className="btn btn-light">
                 Login
