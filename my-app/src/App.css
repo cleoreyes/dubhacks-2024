@@ -46,15 +46,17 @@
   min-height: 200px;
   border-radius: 25px;
   background-color: #d9d9d9;
-  transition: background-color 0.3s, transform 0.3s;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
 }
 
 .category-box:hover {
-  background-color: #8C97A0;
+  background-color: #8c97a0;
   transform: scale(1.1);
 }
 
-.center{
+.center {
   display: flex;
   flex-direction: column;
   justify-content: center;

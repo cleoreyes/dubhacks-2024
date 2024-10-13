@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
-import '../App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import "../App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Landing = () => {
   return (
@@ -14,29 +14,30 @@ const Landing = () => {
       <div className="col-4 bg-secondary p-3 text-light d-flex flex-column justify-content-center text-start">
         <form className="d-flex flex-column px-5">
           <div className="mb-3">
-            <label htmlFor="username" className="form-label">Username</label>
-            <input
-              type="text"
-              id="username"
-              className="form-control"
-            />
+            <label htmlFor="username" className="form-label">
+              Username
+            </label>
+            <input type="text" id="username" className="form-control" />
           </div>
           <div className="mb-3">
-            <label htmlFor="password" className="form-label">Password</label>
-            <input
-              type="password"
-              id="password"
-              className="form-control"
-            />
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
+            <input type="password" id="password" className="form-control" />
           </div>
           <Link to="/homepage">
-          <h3 className="text-center">
-            <button type="submit" className="btn btn-light">Login</button>
-          </h3>
-        </Link>
+            <h3 className="text-center">
+              <button type="submit" className="btn btn-light">
+                Login
+              </button>
+            </h3>
+          </Link>
         </form>
         <p className="mt-3 text-center">
-          Don't have an account? <Link to="/register" className="text-light">Sign up</Link>
+          Don't have an account?{" "}
+          <Link to="/register" className="text-light">
+            Sign up
+          </Link>
         </p>
       </div>
     </div>
