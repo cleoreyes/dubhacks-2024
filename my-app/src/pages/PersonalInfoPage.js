@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./Navbar"; 
+import Navbar from "./Navbar";
 
 const Dropdown = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +24,76 @@ const Dropdown = ({ title, children }) => {
   );
 };
 
+const PersonalInfoForm = ({ fields, onAdd }) => {
+  const initialState = fields.reduce((acc, field) => {
+    acc[field] = "";
+    return acc;
+  }, {});
+  
+  const [input, setInput] = useState(initialState);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onAdd(input);
+    setInput(initialState); // Reset form
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      {fields.map((field) => (
+        <div className="mb-3" key={field}>
+          <input
+            type="text"
+            className="form-control"
+            placeholder={field}
+            value={input[field]}
+            onChange={(e) => setInput({ ...input, [field]: e.target.value })}
+          />
+        </div>
+      ))}
+      <button type="submit" className="btn btn-primary w-100">
+        Add
+      </button>
+    </form>
+  );
+};
+
+const InteractiveList = ({ items, onDelete }) => {
+  return (
+    <ul className="list-group">
+      {items.map((item, index) => (
+        <li key={index} className="list-group-item d-flex justify-content-between align-items-center">
+          {Object.entries(item).map(([key, value]) => (
+            <div key={key}>
+              <strong>{key}:</strong> {value}
+            </div>
+          ))}
+          <button
+            className="btn btn-danger btn-sm"
+            onClick={() => onDelete(index)}
+          >
+            Delete
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
 export default function PersonalInfoPage() {
+  const [basicInfo, setBasicInfo] = useState([]);
+  const [education, setEducation] = useState([]);
+  const [careerInfo, setCareerInfo] = useState([]);
+  const [familyInfo, setFamilyInfo] = useState([]);
+
+  const addItem = (setter) => (item) => {
+    setter((prevItems) => [...prevItems, item]);
+  };
+
+  const deleteItem = (setter) => (index) => {
+    setter((prevItems) => prevItems.filter((_, i) => i !== index));
+  };
+
   return (
     <>
       <Navbar />
@@ -35,80 +104,38 @@ export default function PersonalInfoPage() {
           <div className="row">
             <div className="col-12">
               <Dropdown title="Basic Information">
-                <p>
-                  <strong>Full Name:</strong> Legal name, including any
-                  nicknames or aliases.
-                  <br />
-                  <strong>Date of Birth:</strong> To provide context about the
-                  user's age and life stage.
-                  <br />
-                  <strong>Place of Birth:</strong> The city or town where the
-                  user was born.
-                  <br />
-                  <strong>Current Address:</strong> Where the user currently
-                  resides (can be kept private if needed).
-                </p>
+                <PersonalInfoForm 
+                  fields={["Full Name", "Date of Birth", "Place of Birth", "Current Address"]} 
+                  onAdd={addItem(setBasicInfo)} 
+                />
+                <InteractiveList items={basicInfo} onDelete={deleteItem(setBasicInfo)} />
               </Dropdown>
             </div>
             <div className="col-12">
               <Dropdown title="Educational Background">
-                <p>
-                  <strong>Schools Attended:</strong> Names of educational
-                  institutions from elementary school to higher education.
-                  <br />
-                  <strong>Degrees and Certifications:</strong> Types of degrees
-                  earned and any relevant certifications that showcase
-                  expertise.
-                  <br />
-                  <strong>Notable Achievements:</strong> Honors, awards, or
-                  recognitions received during their educational journey that
-                  are significant.
-                  <br />
-                  <strong>Extracurricular Activities:</strong> Clubs, sports, or
-                  organizations that the user participated in during their
-                  education.
-                </p>
+                <PersonalInfoForm 
+                  fields={["Schools Attended", "Degrees and Certifications", "Notable Achievements", "Extracurricular Activities"]} 
+                  onAdd={addItem(setEducation)} 
+                />
+                <InteractiveList items={education} onDelete={deleteItem(setEducation)} />
               </Dropdown>
             </div>
             <div className="col-12">
               <Dropdown title="Career Information">
-                <p>
-                  <strong>Job History:</strong> A list of past jobs, including
-                  roles, companies, and duration of employment.
-                  <br />
-                  <strong>Current Employment:</strong> Information about the
-                  user's current job title and employer, including a brief
-                  description of their role.
-                  <br />
-                  <strong>Professional Achievements:</strong> Significant
-                  accomplishments, projects, or contributions to the workplace
-                  that the user is proud of.
-                  <br />
-                  <strong>Skills and Expertise:</strong> A summary of key
-                  skills, professional interests, and areas of expertise that
-                  can highlight strengths in the job market.
-                </p>
+                <PersonalInfoForm 
+                  fields={["Job History", "Current Employment", "Professional Achievements", "Skills and Expertise"]} 
+                  onAdd={addItem(setCareerInfo)} 
+                />
+                <InteractiveList items={careerInfo} onDelete={deleteItem(setCareerInfo)} />
               </Dropdown>
             </div>
             <div className="col-12">
               <Dropdown title="Family Introduction">
-                <p>
-                  <strong>Immediate Family Members:</strong> Names and
-                  relationships of family members, such as spouse, children,
-                  parents, and siblings.
-                  <br />
-                  <strong>Extended Family:</strong> Information about
-                  grandparents, aunts, uncles, cousins, etc., that may hold
-                  special significance.
-                  <br />
-                  <strong>Pet Information:</strong> Names and details about pets
-                  that were a part of the user’s life, contributing to their
-                  family story.
-                  <br />
-                  <strong>Family Traditions:</strong> Unique customs or
-                  traditions the family shares, providing insight into their
-                  values and heritage.
-                </p>
+                <PersonalInfoForm 
+                  fields={["Immediate Family Members", "Extended Family", "Pet Information", "Family Traditions"]} 
+                  onAdd={addItem(setFamilyInfo)} 
+                />
+                <InteractiveList items={familyInfo} onDelete={deleteItem(setFamilyInfo)} />
               </Dropdown>
             </div>
           </div>
