@@ -1,9 +1,12 @@
 import React from 'react';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './Navbar'
 
 const Homepage = () => {
   return (
+    <>
+    <Navbar />
     <div className="vh-100">
       <h1 className="text-center pb-2 pt-4">Made by, Karen Miroku</h1>
       <div className="homepage d-flex flex-column justify-content-center align-items-center">
@@ -45,6 +48,7 @@ const Homepage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
