@@ -52,14 +52,14 @@ const Homepage = () => {
           <div className="row w-100">
             <div className="col-6 p-3">
               <Link to="/personal-info" style={{ textDecoration: "none" }}>
-                <div className="category-box w-100 d-flex justify-content-center align-items-center text-black">
+                <div className="category-box w-100 d-flex justify-content-center align-items-center ">
                   <p className="m-0 h4">Personal Information</p>
                 </div>
               </Link>
             </div>
             <div className="col-6 p-3">
               <Link to="/messages" style={{ textDecoration: "none" }}>
-                <div className="category-box w-100 d-flex justify-content-center align-items-center text-black">
+                <div className="category-box w-100 d-flex justify-content-center align-items-center ">
                   <p className="m-0 h4">Messages and Advice</p>
                 </div>
               </Link>
@@ -68,14 +68,14 @@ const Homepage = () => {
           <div className="row w-100">
             <div className="col-6 p-3">
               <Link to="/reflections" style={{ textDecoration: "none" }}>
-                <div className="category-box w-100 d-flex justify-content-center align-items-center text-black">
+                <div className="category-box w-100 d-flex justify-content-center align-items-center ">
                   <p className="m-0 h4">Reflections and Stories</p>
                 </div>
               </Link>
             </div>
             <div className="col-6 p-3">
               <Link to="/lifedocuments" style={{ textDecoration: "none" }}>
-                <div className="category-box w-100 d-flex justify-content-center align-items-center text-black">
+                <div className="category-box w-100 d-flex justify-content-center align-items-center ">
                   <p className="m-0 h4">Life Documents</p>
                 </div>
               </Link>
@@ -84,7 +84,7 @@ const Homepage = () => {
           <div className="row w-100">
             <div className="col-6 p-3">
               <Link to="/media" style={{ textDecoration: "none" }}>
-                <div className="category-box w-100 d-flex justify-content-center align-items-center text-black">
+                <div className="category-box w-100 d-flex justify-content-center align-items-center ">
                   <p className="m-0 h4">Media and Memories</p>
                 </div>
               </Link>
@@ -94,7 +94,7 @@ const Homepage = () => {
                 to="/recipesandtraditions"
                 style={{ textDecoration: "none" }}
               >
-                <div className="category-box w-100 d-flex justify-content-center align-items-center text-black">
+                <div className="category-box w-100 d-flex justify-content-center align-items-center ">
                   <p className="m-0 h4">Recipes and Traditions</p>
                 </div>
               </Link>
