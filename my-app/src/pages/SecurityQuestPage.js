@@ -15,7 +15,7 @@ export const SecurityQuestPage = () => {
 
       <Link to="/homepage">
       <div>
-        <button type="button" class="btn btn-outline-primary mt-2">
+        <button type="button" class="btn btn-secondary mt-2">
           Submit
         </button>
       </div> 
