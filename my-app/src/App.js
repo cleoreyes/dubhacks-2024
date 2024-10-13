@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'; // Your own custom styles
 
 //import the function from the realtime database module
-import { getDatabase, ref, set as firebaseSet } from 'firebase/database';
+// import { getDatabase, ref, set as firebaseSet } from 'firebase/database';
 
 function App() {
   return (
@@ -16,11 +16,11 @@ function App() {
   );
 }
 
-// adding data into firebase
-const db = getDatabase();
-const name = ref(db, "firstName"); // address
-const skills = ref(db, "skills/skill1"); // nested address
-firebaseSet(name, "Keiraaaaa!!!");
+// // adding data into firebase
+// const db = getDatabase();
+// const name = ref(db, "firstName"); // address
+// const skills = ref(db, "skills/skill1"); // nested address
+// firebaseSet(name, "Keiraaaaa!!!");
 
 
 export default App;
